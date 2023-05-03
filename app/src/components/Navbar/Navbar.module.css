@@ -1,0 +1,15 @@
+.navbar_wrap {
+  background-color: #09081a;
+  padding: 20px 0;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar_item {
+  color: #fff;
+  text-decoration: none;
+}
