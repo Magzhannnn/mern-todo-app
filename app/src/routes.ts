@@ -1,7 +1,14 @@
+import SelectTodo from "./components/Todos/SelectTodo";
 import Auth from "./pages/Auth";
 import Home from "./pages/Home";
 import Todos from "./pages/Todos";
-import { HOME_ROUTE, LOGIN_ROUTE, SIGN_ROUTE, TODO_ROUTE } from "./utils/const";
+import {
+  HOME_ROUTE,
+  LOGIN_ROUTE,
+  ONE_TODO_ROUTE,
+  SIGN_ROUTE,
+  TODO_ROUTE,
+} from "./utils/const";
 
 export interface IRouter {
   path: string;
@@ -31,5 +38,9 @@ export const privateRoute: IRouter[] = [
   {
     path: TODO_ROUTE,
     Component: Todos,
+  },
+  {
+    path: ONE_TODO_ROUTE,
+    Component: SelectTodo,
   },
 ];

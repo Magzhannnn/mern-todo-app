@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./Todos.module.css";
 import { useSelector } from "react-redux";
 import {
@@ -13,10 +13,16 @@ import Container from "../../UI/Container/Container";
 const TodosWrap = () => {
   const { loading, error, todos } = useSelector(selectAllTodosInfo);
 
+  useEffect(() => {
+    console.log(todos)
+  }, [todos])
+
+  if(loading) return <Loading title="Todo" />
+  
+  if(error) return <Error title={error} />
+
   return (
     <Container>
-      {loading && <Loading title="Todo" />}
-      {error && <Error title={error} />}
       <TodoList todos={todos} />
     </Container>
   );

@@ -14,7 +14,7 @@ const TodoList: React.FC<TodoListProps> = ({ todos }) => {
   return (
     <div className={styles["todo-list"]}>
       {todos.map((todo) => (
-        <TodoItem todo={todo} />
+        <TodoItem todo={todo} key={todo._id} />
       ))}
     </div>
   );
