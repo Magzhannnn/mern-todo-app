@@ -13,9 +13,9 @@ import Container from "../../UI/Container/Container";
 const TodosWrap = () => {
   const { loading, error, todos } = useSelector(selectAllTodosInfo);
 
-  useEffect(() => {
-    console.log(todos)
-  }, [todos])
+  // useEffect(() => {
+  //   console.log(todos)
+  // }, [todos])
 
   if(loading) return <Loading title="Todo" />
   

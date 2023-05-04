@@ -35,6 +35,7 @@ const TodoItem: React.FC<TodoItemProps> = ({ todo, isLogic = true }) => {
     // .then((data) => console.log(data))
 
     dispatch(removeTodo(id));
+    navigate(TODO_ROUTE);
     console.log("Start Remove");
   };
 
@@ -50,7 +51,6 @@ const TodoItem: React.FC<TodoItemProps> = ({ todo, isLogic = true }) => {
     // .then((data) => console.log(data))
 
     dispatch(updateTodo(id));
-    console.log("Start Update");
   };
 
   return (
@@ -63,7 +63,7 @@ const TodoItem: React.FC<TodoItemProps> = ({ todo, isLogic = true }) => {
         <div className={classesText}>{todo.text}</div>
       </div>
 
-      <div className={styles["todo-item_date"]}>{todo.date}</div>
+      <div className={styles["todo-item_date"]}>{todo.createdAt}</div>
       <div className={styles["todo-item_right"]}>
         {isLogic ? (
           <div
@@ -81,7 +81,7 @@ const TodoItem: React.FC<TodoItemProps> = ({ todo, isLogic = true }) => {
             <PenIcon />
             <div
               className={styles["todo-item_remove"]}
-              onClick={() => isLogic && removeTodoHandler(todo._id)}
+              onClick={() => removeTodoHandler(todo._id)}
             >
               x
             </div>

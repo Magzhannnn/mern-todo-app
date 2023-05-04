@@ -2,7 +2,7 @@ export interface ITodo {
   _id: string;
   text: string;
   complete: boolean;
-  date: string;
+  createdAt: string;
 }
 
 export enum TodoActionTypes {

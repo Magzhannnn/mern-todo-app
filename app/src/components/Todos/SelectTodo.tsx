@@ -19,7 +19,7 @@ const SelectTodo = () => {
     _id: "",
     text: "",
     complete: false,
-    date: "",
+    createdAt: "",
   });
 
   useEffect(() => {
