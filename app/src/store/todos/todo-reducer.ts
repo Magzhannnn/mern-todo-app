@@ -52,8 +52,11 @@ export const todoReducer = (
       return {
         ...state,
         todos: state.todos.map((todo) =>
-          todo._id === action.payload
-            ? { ...todo, complete: !todo.complete }
+          todo._id === action.payload._id
+            ? {
+                ...action.payload,
+                createdAt: toDatestring(action.payload.createdAt),
+              }
             : todo
         ),
       };

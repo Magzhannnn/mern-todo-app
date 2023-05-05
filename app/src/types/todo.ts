@@ -12,6 +12,7 @@ export enum TodoActionTypes {
   ADD_TODO = "ADD_TODO",
   REMOVE_TODO = "REMOVE_TODO",
   UPDATE_TODO = "UPDATE_TODO",
+  UPDATE_TEXT_TODO = "UPDATE_TEXT_TODO",
 }
 
 interface loadTodo {
@@ -40,7 +41,7 @@ interface removeTodo {
 
 interface updateTodo {
   type: TodoActionTypes.UPDATE_TODO;
-  payload: string;
+  payload: ITodo;
 }
 
 export type TodoActions =

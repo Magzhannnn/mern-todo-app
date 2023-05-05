@@ -24,7 +24,7 @@ export const removeTodo = (id: string) => ({
   payload: id,
 });
 
-export const updateTodo = (id: string) => ({
+export const updateTodo = (todo: ITodo) => ({
   type: TodoActionTypes.UPDATE_TODO,
-  payload: id,
+  payload: todo,
 });

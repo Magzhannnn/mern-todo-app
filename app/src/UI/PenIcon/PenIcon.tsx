@@ -1,6 +1,10 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { ModalActionTypes } from "../../types/modal";
 
 const PenIcon = () => {
+  const dispatch = useDispatch();
+
   return (
     <div>
       <svg
@@ -9,6 +13,7 @@ const PenIcon = () => {
         width="35"
         height="35"
         version="1.1"
+        onClick={() => dispatch({ type: ModalActionTypes.OPEN_MODAL })}
       >
         <defs id="SvgjsDefs1002" />
         <g id="SvgjsG1008">
